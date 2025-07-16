@@ -1,6 +1,12 @@
 # Ollama on Docker with FastAPI
 https://www.youtube.com/watch?v=0c96PQd3nA8&t=937s
-<br><br>
+
+
+## Notes:
+- (DONE) Get this container a Modelfile to act like Jane Grey from X-Men, see
+`ollamaTut` for more help.
+- Make this a RAG with some sort of safe and small data file, from there we
+can expand it to use the MITRE ATT&CK framework.
 
 
 ## Install/Setup
@@ -19,7 +25,6 @@ source fastenv/bin/activate
 ```sh
 pip install -r /fastapi/requirements.txt
 ```
-<br><br>
 
 
 ## Build Docker Container

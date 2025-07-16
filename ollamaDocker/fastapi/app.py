@@ -14,7 +14,7 @@ def ask(prompt :str):
         # True makes it look like chatGPT where it comes in word by word, but
         # it sends a separate json packet each time so don't do that
         "stream": False,
-        "model": "llama3"
+        "model": "jean-grey"
     })
 
     return Response(content=response.text, media_type="application/json")
