@@ -7,6 +7,8 @@ Ollama Docker Image: https://hub.docker.com/r/ollama/ollama
 
 ### Notes:
 - Hosts a local LLM model (TARGET is 'Model: Llama 3.1, Param: 8B, Size: 4.7Gb). 
+- We also created our own tweaked version of Llama 3.1 that is instructed
+to act like Jane Grey from X-Men, it's called 'jane'.
 - When you download an LLM, it only pulls from internet that one time. From
 there, any requests, queries, or etc. will be pulled from the LLM that is
 hosted locally from that download.
@@ -48,6 +50,7 @@ ollama serve
 ## Modify Model with a Modelfile
 A modelfile allows us to tweak and change the base LLM to do specific things. First thing is to make a Modelfile in the directory and write in it.
 <br><br>
+
 Create a new model in ollama:
 ```sh
 ollama create newNametoGiveLLM -f ./Modelfile
