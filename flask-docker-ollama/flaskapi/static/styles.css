@@ -1,0 +1,13 @@
+body{
+    background-color: #18191A;
+    font-family: sans-serif;
+}
+
+h1{
+    color: #ffffff;
+}
+
+p{
+    max-width: 600px;
+    color: #f5f5f5;
+}

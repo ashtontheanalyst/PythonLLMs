@@ -1,0 +1,30 @@
+# Compose that hosts the flask backend and the ollama model
+services:
+  # This container is our flaskapi
+  web:
+    build: ./flaskapi
+    ports:
+      - 5000:5000
+    volumes:
+      - ./flaskapi:/app
+      - ./ollama/pull-llama3.sh:/pull-llama3.sh
+    networks:
+      - main-net
+  # This container for ollama
+  ollama:
+    build: ollama
+    ports:
+      - 11434:11434
+    volumes:
+      - ollama-vol:/ollama
+    networks:
+      - main-net
+    entrypoint: ["/usr/bin/bash", "/pull-llama3.sh"]
+
+networks:
+  main-net:
+    driver: bridge
+
+volumes:
+  ollama-vol:
+    driver: local
